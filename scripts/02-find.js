@@ -73,7 +73,7 @@ function testFindByName(name) {
         })
     })
 };
-// testFindByName("고길동");
+testFindByName("고길동");
 
 //  비교 연산자 : $gt(>), $gte(>=), $lt(<), $lte(<=), $ne(!=)
 //  논리 연산자 : $and, $or, $not
