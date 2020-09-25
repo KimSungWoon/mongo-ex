@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
     "mongodb": "^3.6.2"
   },
@@ -12,5 +14,16 @@
   },
   "author": "",
   "license": "ISC",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KimSungWoon/mongo-ex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KimSungWoon/mongo-ex/issues"
+  },
+  "homepage": "https://github.com/KimSungWoon/mongo-ex#readme",
   "description": ""
 }

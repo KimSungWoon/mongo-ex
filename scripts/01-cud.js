@@ -4,7 +4,7 @@ const { MongoClient } = require('mongodb');
 //  mongodb://{서버IP}:{port}/{데이터베이스 이름}
 
 //  클라이언트 생성
-const url = "mongodb://192.168.1.134:27017/mydb";
+const url = "mongodb://192.168.1.112:27017/mydb";
 const client = new MongoClient(url, { useUnifiedTopology: true });
 //  접속 테스트
 function testConnect() {
@@ -19,7 +19,7 @@ function testConnect() {
         }
     })
 }
-// testConnect();
+testConnect();
 
 //  insertOne, insertMany
 function testInsertDocument(docs) {
@@ -56,7 +56,7 @@ function testInsertDocument(docs) {
         });
     }
 }
-// testInsertDocument( { name: "전우치", job: "도사" });
+testInsertDocument( { name: "전우치", job: "도사" });
 /*
 testInsertDocument([
     {name: "고길동", gender: "남성", species: "인간", age: 50},
@@ -82,7 +82,7 @@ function testDeleteAll() {
         console.error(err);
     });
 }
-// testDeleteAll();
+testDeleteAll();
 
 //  Update 
 //  SQL : UPDATE table SET col=val, col=val

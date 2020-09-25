@@ -4,7 +4,7 @@ const { MongoClient } = require('mongodb');
 //  mongodb://{서버IP}:{port}/{데이터베이스 이름}
 
 //  클라이언트 생성
-const url = "mongodb://192.168.1.134:27017/mydb";
+const url = "mongodb://192.168.1.112:27017/mydb";
 const client = new MongoClient(url, { useUnifiedTopology: true });
 
 //  문서 한 개 가져오기
@@ -19,7 +19,7 @@ function testFindOne() {
         
     })
 }
-// testFindOne();
+testFindOne();
 
 //  db.collection.find()
 //  SELECT * FROM table
@@ -73,7 +73,7 @@ function testFindByName(name) {
         })
     })
 };
-testFindByName("고길동");
+//testFindByName("고길동");
 
 //  비교 연산자 : $gt(>), $gte(>=), $lt(<), $lte(<=), $ne(!=)
 //  논리 연산자 : $and, $or, $not
