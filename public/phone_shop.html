@@ -109,7 +109,11 @@
                 .addEventListener(function(event){
                     console.log(event);
                     console.log(event.target);
-                    console.log("눌러진 키 :",event.keyCode);
+                    console.log("눌러진 키 :", event.keyCode);
+                    
+                    // #btn-search 버튼의 value에 검색어 추가
+                    var btn = document.getElementById("btn-search");
+                    btn.innerText = event.target.value + "검색";
                 });
         }
     });
