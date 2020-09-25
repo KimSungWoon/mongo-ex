@@ -1,6 +1,7 @@
 //  라우터 
 const express = require("express");
 const router = express.Router();
+const {ObjectId} = require("mongodb");
 
 //  라우터 모듈 내보내기
 module.exports = (app) => {
@@ -47,5 +48,19 @@ module.exports = (app) => {
 
     });
 
+    router.get("/friends/show/id", (req,resp) =>{
+        console.log("id:",req.params.id);
+        // _id 필드는 묹열이 아니라 objectId 라는 특수한 객체이다.
+        let db = app.get("db");
+        db.collection("friends").findOne(
+            {_id: ObjectId(req.params.id)}
+            ).then(result => {
+                console.log(result);
+                resp.status(200).render("firends_show", {friend : result});
+            }).catch(err => {
+                console.error(err);
+            })
+ 
+    });
     return router;
 }
